@@ -1,0 +1,71 @@
+:root {
+    --white: #fff;
+    --background: #1f262f;
+    --background-card: rgb(26, 33, 42);
+    --gray-line: #dcdde0;
+    --icon-shearch: rgb(134, 151, 162);
+    --text: #666666;
+    --text-white: #ffff;
+    --text-highlight: #b3b9ff;
+    --text-gray: rgb(134, 151, 162);
+    --title: #2e384d;
+    --red: rgb(255, 78, 100);
+    --green: rgb(12, 212, 99);
+    --blue: #5965e0;
+    --blue-dark: rgb(92, 51, 207);
+    --blue-twitter: #2aa9e0;
+}
+@media (max-width: 1080px) {
+    html {
+        font-size: 93.75%;
+    }
+}
+
+@media (max-width: 1080px) {
+    html {
+        font-size: 87.5%;
+    }
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+    font-family: "Inter", sans-serif;
+}
+
+body,
+input,
+textarea,
+button {
+    font: 400 1rem "Inter", sans-serif;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+.app {
+    width: 100%;
+    height: 100%;
+    background: var(--background);
+    color: var(--text);
+}
+
+.dark {
+    --background: #000;
+    --white: rgb(32, 30, 30);
+    --text: #fff;
+    --title: #f8f8f8;
+}
