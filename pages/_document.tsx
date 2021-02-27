@@ -15,7 +15,7 @@ class MyDocument extends Document {
             <Html>
                 <Head>
                     <title>Sportsbet.io</title>
-                    <meta property="og:title" content="Move-it" key="title" />
+                    <meta property="og:title" content="sportsbet" key="title" />
                     <link rel="preconnect" href="https://fonts.gstatic.com" />
                     <link
                         href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Rajdhani:wght@600&display=swap"
