@@ -1,3 +1,4 @@
+import { useState } from 'react'
 import styles from '../styles/components/swipperOptions.module.scss'
 
 
@@ -5,23 +6,30 @@ interface OptionsProps {
     nameIcon: string;
     text: string;
     value?: string
+    
 }
 
-function Options({nameIcon, text, value}: OptionsProps) {
+function Options({nameIcon, text, value, }: OptionsProps) {
 
-    
+    const [butonActive, setButtonActive]= useState(false)
+
+    function handleActiveButton() {
+        setButtonActive(!butonActive)
+    }
 
     return(
-        <div className={`${styles.itemContainer} `}> 
+        <button className={`${styles.itemContainer} ${butonActive && styles.active }`} onClick={handleActiveButton}> 
             <div>
                 <img src={`icons/${nameIcon}`} alt=""/>
             </div>
             <p>{text}</p>
-        </div>
+        </button>
     )
 }
 
 export default function SwipperOptions() {
+
+    
 
 
     return (

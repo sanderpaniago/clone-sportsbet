@@ -11,6 +11,7 @@
     --title: #2e384d;
     --red: rgb(255, 78, 100);
     --green: rgb(12, 212, 99);
+    --border-color: rgb(49, 55, 63);
     --blue: #5965e0;
     --blue-dark: rgb(92, 51, 207);
     --blue-twitter: #2aa9e0;
@@ -37,14 +38,14 @@ html,
 body {
     padding: 0;
     margin: 0;
-    font-family: "Inter", sans-serif;
+    font-family: "Poppins", sans-serif;
 }
 
 body,
 input,
 textarea,
 button {
-    font: 400 1rem "Inter", sans-serif;
+    font: 400 1rem "Poppins", sans-serif;
 }
 
 button {
