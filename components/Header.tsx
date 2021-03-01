@@ -72,44 +72,46 @@ export default function Header() {
             <div className={`${stylesMenu.menuModal} ${modalActive && stylesMenu.active}`}>
                 <ul>
                     <h5 className={stylesMenu.active}>Esportes</h5>
-                    <li>Ao vivo</li>
-                    <li>Próximos</li>
+                    <li><img src="/icons/ao-vivo.svg" alt=""/> Ao vivo</li>
+                    <li><img src="/icons/calendar.svg" alt=""/> Próximos</li>
                 </ul>
 
                 <ul>
                     <h5>Cassino</h5>
-                    <li>Cassino Ao vivo</li>
-                    <li>Slots</li>
-                    <li><strong>Bombay Club</strong></li>
+                    <li><img src="/icons/cassino.svg" alt=""/> Cassino Ao vivo</li>
+                    <li><img src="icons/slots.svg" alt=""/> Slots</li>
+                    <li><img src="/icons/bombay-club.svg" alt=""/> <strong>Bombay Club</strong></li>
                 </ul>
 
                 <ul>
-                    <li>Clube Sportsbet</li>
+                    <li><img src="/icons/star.svg" alt=""/> Clube Sportsbet</li>
                 </ul>
 
                 <ul>
-                    <li>Corrida de Cavalos</li>
-                    <li>Esportes Virtuais</li>
-                    <li>Guru De Esportes</li>
-                    <li>Brasil</li>
-                    <li>BBB21</li>
-                    <li>NBA</li>
+                    <li><img src="/icons/star.svg" alt=""/> Corrida de Cavalos</li>
+                    <li><img src="/icons/star.svg" alt=""/> Esportes Virtuais</li>
+                    <li><img src="/icons/star.svg" alt=""/> Guru De Esportes</li>
+                    <li><img src="/icons/star.svg" alt=""/> Brasil</li>
+                    <li><img src="/icons/star.svg" alt=""/> BBB21</li>
+                    <li><img src="/icons/star.svg" alt=""/> NBA</li>
                 </ul>
 
                 <ul>
-                    <li>Chat Ao Vivo</li>
-                    <li>Central De Ajuda</li>
-                    <li>Promoçõe</li>
-                    <li>VIP</li>
-                    <li>Sobre</li>
-                    <li>Notícias</li>
+                    <li><img src="/icons/chat" alt=""/> Chat Ao Vivo</li>
+                    <li><img src="/icons/central-help.svg" alt=""/> Central De Ajuda</li>
+                    <li><img src="icons/promotion.svg" alt=""/> Promoçõe</li>
+                    <li><img src="/icons/star.svg"/> VIP</li>
+                    <li><img src="/icons/sobre.svg" alt=""/> Sobre</li>
+                    <li><img src="/icons/noticias.svg" alt=""/> Notícias</li>
                 </ul>
 
-                <div>
-                    <div>
+                <div className={stylesMenu.themeContainer}>
+                    <span>dia</span>
+                    <label>
                         <input type="checkbox" id="theme"/>
                         <span></span>
-                    </div>
+                    </label>
+                    <span>noite</span>
                 </div>
 
                 <select name="lang" id="">

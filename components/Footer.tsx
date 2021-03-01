@@ -120,6 +120,18 @@ export default function Footer() {
                     </ul>
                 </ListItem>
             </section>
+
+            <section className={styles.bitContainer}>
+                <p><span>1</span> BTC = <span>39339.240</span> EUR</p>
+            </section>
+
+            <div className={styles.imgContainers}>
+                <img src="//cdn.coingaming.io/bitcasino/images/icons/footer/footer/askgamblers-award-2019.png" alt=""/>
+                <img src="https://sportsbet.imgix.net/sbc-2020-logo.png" alt=""/>
+                <div>
+                    <p>18+</p>
+                </div>
+            </div>
         </footer>
     )
 }
