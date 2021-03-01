@@ -1,6 +1,6 @@
+import { ReactNode, useState } from 'react';
 import { faChevronRight, faStopwatch } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { ReactNode, useState } from 'react';
 import styles from '../styles/components/events.module.scss'
 
 
@@ -10,7 +10,7 @@ interface EventListProps {
     urlIcon: string
 }
 
-function EventList({children, title, urlIcon}: EventListProps) {
+export function EventList({children, title, urlIcon}: EventListProps) {
     return(
         <div className={`${styles.eventContent}`}>
                 <header>
@@ -27,7 +27,7 @@ function EventList({children, title, urlIcon}: EventListProps) {
     )
 }
 
-function EventCard() {
+export function EventCard() {
 
     const [cardActive, setCardActive] = useState(false)
 

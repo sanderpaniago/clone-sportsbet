@@ -1,0 +1,72 @@
+$border: 1px solid var(--border-color);
+
+.menuModal {
+    position: absolute;
+    background: var(--background);
+    width: 100%;
+    top: 250px;
+    left: 0;
+    z-index: 1;
+    padding: 0 1.5rem 5rem;
+    flex-direction: column;
+    display: flex;
+
+    display: none !important;
+
+    ul {
+        width: 100%;
+        list-style: none;
+        border-bottom: $border;
+        padding: 1.85rem 0;
+
+        h5 {
+            font-size: 1em;
+            line-height: 1.33;
+            width: 100%;
+            font-weight: 400;
+            text-transform: capitalize;
+            margin-bottom: .85rem;
+            color:  var(--text-gray)
+        }
+
+        .active {
+            color: var(--white);
+            font-weight: 600;
+            position: relative;
+
+            &::before {
+                content: '';
+                width: 4px;
+                height: 110%;
+                background: var(--green);
+                display: flex;
+                position: absolute;
+                top: 0;
+                left: -1.5rem;
+                border-radius: 0 2px 2px 0 ;
+            }
+        }
+
+        li {
+            color:  var(--text-gray);
+
+            strong {
+                color: rgb(197, 166, 121);
+
+                font-size: 1em;
+                line-height: 1.33;
+                width: 100%;
+                text-transform: capitalize;
+                font-weight: 400;
+            }
+
+            & + li {
+                margin-top: 1rem;
+            }
+        }
+    }
+
+    &.active {
+        display: flex !important;
+    }
+}
