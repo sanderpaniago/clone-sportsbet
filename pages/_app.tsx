@@ -1,6 +1,8 @@
+import Layout from '../components/Layout';
+
 import '../styles/global.scss'
 import 'swiper/swiper.scss';
-import Layout from '../components/Layout';
+import 'swiper/components/pagination/pagination.scss';
 
 function MyApp({ Component, pageProps }) {
   return(

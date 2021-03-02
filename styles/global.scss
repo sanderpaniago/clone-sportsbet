@@ -80,6 +80,19 @@ a {
     --title: #f8f8f8;
 }
 
+.swiper-pagination-bullets {
+    width: auto !important;
+    left: auto !important;
+}
+
+.swiper-pagination-bullet {
+    background: var(--text-gray) !important;
+}
+
+.swiper-pagination-bullet-active {
+    background: var(--green) !important;
+}
+
 @media(min-width: 1080px) {
     .containerPrimary {
         width: 77.5%;

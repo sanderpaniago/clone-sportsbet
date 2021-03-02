@@ -1,12 +1,13 @@
 import Events from "../components/Events";
 import Footer from "../components/Footer";
-import Header from "../components/Header";
-import SwipperOptions from "../components/SwipperOptions";
 import styles from '../styles/pages/home.module.scss'
+
+import SwiperDestaque from '../components/SwiperDestaque'
 
 export default function Home() {
   return (
         <section>
+            <SwiperDestaque />
             <Events />
         </section>
   )

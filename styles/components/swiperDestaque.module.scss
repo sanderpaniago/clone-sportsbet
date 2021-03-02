@@ -1,0 +1,121 @@
+.swiperContainer {
+    background: var(--background-card);
+    margin-top: 2rem;
+    padding: 2.5rem 1.5rem 3rem;
+    width: 100%;
+    height: 100% !important;
+    border-radius: 2rem;
+
+    
+}
+
+.swiperItemContainer {
+    display: flex;
+    flex-direction: column;
+
+    width: fit-content !important;
+
+    .description {
+        display: none;
+    }
+    h4 {
+        color: var(--white);
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 1.3;
+        margin-bottom: 1.2rem;
+    }
+    img {
+        max-width: 360px;
+        border-radius: 1rem;
+        
+        &.isMobile {
+            display: flex;
+        }
+
+        &.isDesktop {
+            display: none;
+        }
+    }
+
+    span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+        
+        &  span {
+            background: var(--background-card);
+            width: fit-content;
+            display: flex;
+            z-index: 12;
+            padding: 0 1rem;
+            color: var(--text-gray);
+
+            &::before {
+                content: none
+            }
+        }
+
+
+
+        &::before {
+            content: '';
+            width: 100%;
+            height: 1px;
+            background: var(--text-gray);
+            display: flex;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+        }
+    }
+
+    .infContaniner {
+        display: flex;
+        gap: 1rem;
+        .infoItem {
+            width: fit-content;
+            border-radius: .25rem;
+            padding: 0.5rem 1rem;
+            background-color: var(--background);
+            flex: 1;
+            
+            p {
+                color: var(--white);
+                font-size: 11px;
+            }
+            
+            strong {
+                color: var(--green);
+                font-size: 11px;
+                font-weight: 500;
+            }
+        }
+    }
+}
+
+@media(min-width: 1080px) {
+    .swiperItemContainer {
+        flex: 1;
+        width: 40% !important;
+
+        .description {
+            display: block;
+            font-size: 12px;
+            color: var(--white);
+            margin-bottom: 10px;
+        }
+        img {
+            max-width: none;
+            width: 540px;
+            height: 324px;
+            position: absolute;
+            top: -3rem;
+            right: -1.5rem;
+            object-fit: cover;
+        }
+    }
+}
