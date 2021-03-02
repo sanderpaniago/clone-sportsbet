@@ -1,30 +1,32 @@
 import { faPlus, faMinus} from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { useState } from 'react';
+import { useContext, useState } from 'react';
+import { ApostaContext } from '../context/ApostasContext';
 import styles from '../styles/components/modalAposta.module.scss'
 
 export default function ModalAposta() {
 
-    const [modalActive, setModalActive] = useState({active: false, focus: 0})
+
+    const {itensAposta, modalActive, updateModal, removeIAposta } = useContext(ApostaContext)
 
     return (
         <div className={styles.modalApostaContainer}>
             <header>
                 <div 
-                    onClick={()=> setModalActive({active: true, focus: 0})} 
+                    onClick={()=> updateModal({ active: true, focus: 0})} 
                     className={ modalActive.focus === 0 && styles.active}
                     >
                     <p>simples</p>
-                    <span>1</span>
+                    <span>{itensAposta.length}</span>
                 </div>
                 <div 
-                    onClick={()=> setModalActive({ active: true, focus: 1})} 
+                    onClick={()=> updateModal({ active: true, focus: 1})} 
                     className={modalActive.focus !== 0 && styles.active}
                 >
                     <p>Múltipla</p>
                 </div>
 
-                <button onClick={()=> setModalActive({...modalActive, active: !modalActive.active})} className={`${styles.iconContainer}`}>
+                <button onClick={()=> updateModal({...modalActive, active: !modalActive.active})} className={`${styles.iconContainer}`}>
                     {!modalActive.active? (
                         <FontAwesomeIcon icon={faPlus}/>
                     ):(
@@ -35,33 +37,44 @@ export default function ModalAposta() {
             <div style={modalActive.active ? {display: 'block'} : {display: 'none'}}>
                 <main>
                     {modalActive.focus === 0 ? (
-                        <div>
-                            <h5>KK Sutjeska Niksic - kk Studentski Centar</h5>
-                            <span>Vercedor(incluindo prorrogação)</span>
+                        itensAposta.map((item, index) => {
+                            return(
+                                <div key={index} className={styles.itemCard}>
+                                    <h5>{item.times[0]} - {item.times[1]}</h5>
+                                    <span>Vercedor(incluindo prorrogação)</span>
 
-                            <div className={styles.info}>
-                                <h6>KK Sutjeska Niksic</h6>
-                                <p>3.05</p>
-                                <input defaultValue={0} aria-valuemin={0} type="number"/>
-                            </div>
-                            <div className={styles.removeContainer}>
-                                <a>Remover X</a>
-                                <p>Ganho Potencial: <span>BRL 0,00</span></p>
-                            </div>
-                        </div>
-                    ) : (
-                        <div>
-                            <h5>KK Sutjeska Niksic - kk Studentski Centar</h5>
-                            <span>Vercedor(incluindo prorrogação)</span>
-
-                            <div className={styles.info}>
-                                <h6>KK Sutjeska Niksic</h6>
-                                <p>3.05</p>
-                                <div className={styles.removeContainer} style={{width: '100%'}}>
-                                    <a>Remover X</a>
+                                    <div className={styles.info}>
+                                        <h6>{item.timeSelect}</h6>
+                                        <p>{item.value}</p>
+                                        <input defaultValue={0} aria-valuemin={0} type="number"/>
+                                    </div>
+                                    <div className={styles.removeContainer}>
+                                        <a onClick={()=> removeIAposta(item)}>Remover X</a>
+                                        <p>Ganho Potencial: <span>BRL 0,00</span></p>
+                                    </div>
                                 </div>
-                                <input defaultValue={0} min={0} type="number"/>
-                            </div>
+                            )
+                        })
+                    ) : ( 
+                        <div>
+                            {itensAposta.map((item, index) => {
+                                return(
+                                    <div key={index} className={styles.itemCard}>
+                                        <h5>{item.times[0]} - {item.times[1]}</h5>
+                                        <span>Vercedor(incluindo prorrogação)</span>
+
+                                        <div className={styles.info}>
+                                            <h6>{item.timeSelect}</h6>
+                                            <p>{item.value}</p>
+                                            <div className={styles.removeContainer} style={{width: '100%'}}>
+                                                <a onClick={()=> removeIAposta(item)}>Remover X</a>
+                                            </div>
+                                            <input defaultValue={0} min={0} type="number"/>
+                                        </div>
+                                    </div>
+                                )}
+                            )}
+                            
                             
                             <section>
                                 <span>Odds: </span>

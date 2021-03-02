@@ -1,8 +1,9 @@
-import { useState } from 'react'
+import { useContext, useState } from 'react'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from '../styles/components/footer.module.scss'
 import ModalAposta from './ModalAposta';
+import { ApostaContext } from '../context/ApostasContext';
 
 function ListItem({children}) {
     
@@ -21,6 +22,7 @@ function ListItem({children}) {
 
 export default function Footer() {
 
+    const {itensAposta} = useContext(ApostaContext)
     
     return (
         <footer className={styles.footer}>
@@ -134,7 +136,9 @@ export default function Footer() {
                 </div>
             </div>
 
-            <ModalAposta />
+            {itensAposta.length > 0 && (
+                <ModalAposta />
+            )}
         </footer>
     )
 }
