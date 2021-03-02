@@ -93,6 +93,10 @@ a {
     background: var(--green) !important;
 }
 
+.containerPrimary {
+    width: 100%;
+}
+
 @media(min-width: 1080px) {
     .containerPrimary {
         width: 77.5%;

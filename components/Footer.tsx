@@ -2,6 +2,7 @@ import { useState } from 'react'
 import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import styles from '../styles/components/footer.module.scss'
+import ModalAposta from './ModalAposta';
 
 function ListItem({children}) {
     
@@ -132,6 +133,8 @@ export default function Footer() {
                     <p>18+</p>
                 </div>
             </div>
+
+            <ModalAposta />
         </footer>
     )
 }
