@@ -22,7 +22,7 @@
     }
 }
 
-@media (max-width: 1080px) {
+@media (max-width: 768px) {
     html {
         font-size: 87.5%;
     }
@@ -39,6 +39,11 @@ body {
     padding: 0;
     margin: 0;
     font-family: "Poppins", sans-serif;
+    width: 100vw;
+    min-height: 100vh;
+    background: var(--background);
+    color: var(--text);
+    overflow-x: hidden;
 }
 
 body,
@@ -57,11 +62,14 @@ a {
     text-decoration: none;
 }
 
+.masterContainer {
+    display: flex;
+    width: 100%;
+}
+
 .app {
-    width: 100vw;
-    min-height: 100vh;
-    background: var(--background);
-    color: var(--text);
+    max-width: 1240px;
+    margin: 0 auto;
 }
 
 
@@ -70,4 +78,10 @@ a {
     --white: rgb(32, 30, 30);
     --text: #fff;
     --title: #f8f8f8;
+}
+
+@media(min-width: 1080px) {
+    .containerPrimary {
+        width: 77.5%;
+    }
 }

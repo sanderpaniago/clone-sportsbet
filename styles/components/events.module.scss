@@ -186,3 +186,9 @@ $border: 1px solid var(--border-color);
         }
     }
 }
+
+@media(min-width: 1080px) {
+    .eventContainer {
+        padding: 1rem 1rem 1.5rem;
+    }
+}

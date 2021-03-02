@@ -1036,6 +1036,11 @@ locate-path@^5.0.0:
   dependencies:
     p-locate "^4.1.0"
 
+lodash.isequal@^4.5.0:
+  version "4.5.0"
+  resolved "https://registry.yarnpkg.com/lodash.isequal/-/lodash.isequal-4.5.0.tgz#415c4478f2bcc30120c22ce10ed3226f7d3e18e0"
+  integrity sha1-QVxEePK8wwEgwizhDtMib30+GOA=
+
 lodash.sortby@^4.7.0:
   version "4.7.0"
   resolved "https://registry.yarnpkg.com/lodash.sortby/-/lodash.sortby-4.7.0.tgz#edd14c824e2cc9c1e0b0a1b42bb5210516a42438"
@@ -1432,7 +1437,7 @@ process@0.11.10, process@^0.11.10:
   resolved "https://registry.yarnpkg.com/process/-/process-0.11.10.tgz#7332300e840161bda3e69a1d1d91a7d4bc16f182"
   integrity sha1-czIwDoQBYb2j5podHZGn1LwW8YI=
 
-prop-types@15.7.2, prop-types@^15.7.2:
+prop-types@15.7.2, prop-types@^15.6.0, prop-types@^15.7.2:
   version "15.7.2"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.7.2.tgz#52c41e75b8c87e72b9d9360e0206b99dcbffa6c5"
   integrity sha512-8QQikdH7//R2vurIJSutZ1smHYTcLpRWEOlHnzcWHmBYrOGUysKwSsrC89BCiFj3CbrfJ/nXFdJepOVrY1GCHQ==
@@ -1552,6 +1557,15 @@ react-refresh@0.8.3:
   resolved "https://registry.yarnpkg.com/react-refresh/-/react-refresh-0.8.3.tgz#721d4657672d400c5e3c75d063c4a85fb2d5d68f"
   integrity sha512-X8jZHc7nCMjaCqoU+V2I0cOhNW+QMBwSUkeXnTi8IPe6zaRWfn60ZzvFDZqWPfmSJfjub7dDW1SP0jaHWLu/hg==
 
+react-swipe@^6.0.4:
+  version "6.0.4"
+  resolved "https://registry.yarnpkg.com/react-swipe/-/react-swipe-6.0.4.tgz#76e53599b1a093d5a3a841c7f391ef0abcc1babb"
+  integrity sha512-NIF+gVOqPpE8GyCg0ssFC+fPgeqCwNnvqFU/A8nDAOvoncW3KjSVFwgkYNnErHvpFZGmsVw4SLWK96n7+mnChg==
+  dependencies:
+    lodash.isequal "^4.5.0"
+    prop-types "^15.6.0"
+    swipe-js-iso "^2.1.5"
+
 react@17.0.1:
   version "17.0.1"
   resolved "https://registry.yarnpkg.com/react/-/react-17.0.1.tgz#6e0600416bd57574e3f86d92edba3d9008726127"
@@ -1559,6 +1573,13 @@ react@17.0.1:
   dependencies:
     loose-envify "^1.1.0"
     object-assign "^4.1.1"
+
+reactjs-swiper@^0.1.0:
+  version "0.1.0"
+  resolved "https://registry.yarnpkg.com/reactjs-swiper/-/reactjs-swiper-0.1.0.tgz#38d2dbc4ffe896ecb7293643475555828ce080f1"
+  integrity sha1-ONLbxP/oluy3KTZDR1VVgozggPE=
+  dependencies:
+    swiper "^3.4.2"
 
 readable-stream@^2.0.2, readable-stream@^2.0.6, readable-stream@^2.3.3, readable-stream@^2.3.6:
   version "2.3.7"
@@ -1895,6 +1916,16 @@ supports-color@^7.1.0:
   integrity sha512-qpCAvRl9stuOHveKsn7HncJRvv501qIacKzQlO/+Lwxc9+0q2wLyv4Dfvt80/DPn2pqOBsJdDiogXGR9+OvwRw==
   dependencies:
     has-flag "^4.0.0"
+
+swipe-js-iso@^2.1.5:
+  version "2.1.5"
+  resolved "https://registry.yarnpkg.com/swipe-js-iso/-/swipe-js-iso-2.1.5.tgz#9b0eea8b9740487e6169d655184fc6440b6a2e34"
+  integrity sha512-yTTU5tDYEvtKfCD8PN+Rva25acJwogUCd6wPT1n1im/MOJlg6PtHiPKaaNK7HDBiIrWThA/WRbJZbox2letghg==
+
+swiper@^3.4.2:
+  version "3.4.2"
+  resolved "https://registry.yarnpkg.com/swiper/-/swiper-3.4.2.tgz#39d6b410b1a39833e1f72d3b72999df5f5e38392"
+  integrity sha1-Oda0ELGjmDPh9y07cpmd9fXjg5I=
 
 swiper@^6.4.15:
   version "6.4.15"

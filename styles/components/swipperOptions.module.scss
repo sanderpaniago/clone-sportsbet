@@ -1,9 +1,62 @@
+.swiperBox {
+    height: calc(8rem - 16px);
+    overflow: hidden;
+    position: relative;
+    width: 100vw;
+}
 .swipperContainer {
     padding: 0 1rem;
     display: flex;
     gap: 1.4rem;
     height: 8rem;
     overflow: auto;
+    scroll-behavior: smooth;
+}
+
+.btnPrev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--background-card);
+    border: none;
+    height: 3rem;
+    width: 2rem;
+    outline: none;
+
+    border-radius: 5px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    img {
+        width: 1.5rem;
+        height: 1.5rem;
+        transform: rotate(90deg);
+    }
+}
+
+.btnNext {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: var(--background-card);
+    border: none;
+    height: 3rem;
+    width: 2rem;
+    right: 0;
+    outline: none;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 5px;
+
+    img {
+        width: 1.5rem;
+        height: 1.5rem;
+        transform: rotate(-90deg);
+    }
 }
 
 .itemContainer {
@@ -55,5 +108,20 @@
         p {
             color: var(--white);
         }
+    }
+}
+
+@media(max-width: 1080px) {
+    .btnPrev, .btnNext {
+        display: none;
+        
+    }
+
+}
+
+@media(min-width: 1080px) {
+
+    .swiperBox {
+        width: 100%;
     }
 }
