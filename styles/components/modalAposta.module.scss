@@ -7,6 +7,7 @@ $border: 1px solid var(--border-color);
     background: var(--background);
     border-top: 4px solid var(--green);
     z-index: 20;
+    max-width: 500px;
     
     header {
         display: flex;
@@ -215,5 +216,16 @@ $border: 1px solid var(--border-color);
                 color: rgb(134, 151, 162);
             }
         }
+    }
+}
+
+@media(min-width: 500px) {
+    .modalApostaContainer {
+        box-shadow: rgb(0 0 0 / 18%) 0px 2.4px 7.2px, rgb(0 0 0 / 22%) 0px 12.8px 28.8px;
+        right: 1rem;
+        left: auto;
+        max-width: 420px;
+        max-height: 70vh;
+        overflow-y: auto;
     }
 }
